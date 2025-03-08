@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque Atlas - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Homemade+Apple&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap" rel="stylesheet">
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ----- Header ----- */
+header {
+    background-image: linear-gradient(to right, black, rgba(165, 42, 42, 0.495));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- Navigation ----- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #34495e;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #4ca1af;
+    border-radius: 5px;
+}
+
+/* ----- Section principale ----- */
+main {
+    text-align: center;
+    padding: 50px;
+}
+
+main img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+ 
+table {
+    width: 60%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background:linear-gradient(45deg, rgba(225, 105, 6, 0.8), rgba(126, 28, 3, 0.8));
+           
+    color: white;
+}
+
+table tr {
+    background: linear-gradient(45deg, rgba(226, 190, 128, 0.8), rgba(251, 253, 141, 0.8));
+           
+}
+
+
+
+body {
+            background-image: url('books-1842306.jpg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            margin: 0;
+            height: 100vh;
+}
+.description {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color:white;
+            width:900px;
+            text-align: center;
+            margin-left:130px;
+            font-family: Merriweather, sans-serif;
+            
+        }
+        .btn{ 
+            background: linear-gradient(45deg, rgba(225, 105, 6, 0.8), rgba(126, 28, 3, 0.8));
+           
+      color: #fff;               /* Couleur du texte */
+      border: none;              /* Pas de bordure */
+      border-radius: 25px;       /* Coins arrondis */
+      padding: 12px 24px;        /* Espacement interne */
+      font-size: 16px;           /* Taille du texte */
+      cursor: pointer;           /* Pointeur souris survol */
+      transition: 
+        transform 0.2s ease, 
+        box-shadow 0.2s ease;    /* Transitions pour l'animation */
+      text-decoration: none;     /* Pas de soulignement (si utilisé sur <a>) */
+      font-family: Merriweather, sans-serif;
+      display: inline-block;     /* Pour que le bouton s’aligne correctement */
+    }
+
+    /* Effet au survol */
+    .btn:hover {
+      transform: translateY(-3px); /* Légère remontée */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre portée */
+   
+    }
+    </style>
+</head>
+<body>
+    
+     
+    <header>
+        <h1>Bibliothèque Atlas</h1>
+        <p>5, Boulevard Zerktouni – Casablanca</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="chat.html">Accueil</a></li>
+            <li><a href="page-abonement.html">Abonnement</a></li>
+            <li><a href="page-repartition.html">Répartition Horaire</a></li>
+            <li><a href="page-livre.html">Livres</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="intro">
+          
+            <p class="description">
+                La bibliothèque Atlas est spécialisée dans la vente, la location et l’édition des livres scientifiques sous format numérique ou papier. 
+                Elle dispose d'une salle multimédia pour la projection de films documentaires scientifiques ainsi que de nombreux ordinateurs.
+            </p>
+            <a href="https://openlibrary.org/"><button class="btn">Voir les livres</button></a>
+        </section>
+
+        <section class="evolution">
+            <h2 style="color:white;font-family:Merriweather;">Évolution des abonnés</h2>
+            <table style="font-family: Merriweather, sans-serif;">
+                <tr>
+                    <th>Année</th>
+                    <th>Nombre d'abonnés</th>
+                </tr>
+                <tr><td>2000</td><td>150</td></tr>
+                <tr><td>2004</td><td>220</td></tr>
+                <tr><td>2008</td><td>290</td></tr>
+                <tr><td>2012</td><td>320</td></tr>
+                <tr><td>2015</td><td>360</td></tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

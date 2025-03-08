@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Emploi du temps Bibliothèque</title>
+    <style>
+        /* Style Classique Bibliothèque */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f3e7;
+            padding: 2rem;
+        }
+
+        .emploi-temps {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        .emploi-temps th {
+            background-color: #2c4f6b;
+            color: #ffffff;
+            padding: 15px;
+            border: 1px solid #d4af37;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .emploi-temps td {
+            padding: 12px;
+            border: 1px solid #e0d6c3;
+            text-align: center;
+            vertical-align: middle;
+            transition: background-color 0.3s;
+        }
+
+        .emploi-temps tr:nth-child(even) {
+            background-color: #f8f5ec;
+        }
+
+        /* Styles des cellules colorées */
+        .groupe1 { background-color: #c44536; color: white; }
+        .groupe2 { background-color: #d4af37; color: #2c4f6b; }
+        .groupe4 { background-color: #e3c878; color: #2c4f6b; }
+        .groupe5 { background-color: #a52a2a; color: white; }
+        .pause { background-color: #2c4f6b; color: #d4af37; }
+        .projection { background-color: #4a6b8a; color: white; }
+        .enfant { background-color: #6b8a4a; color: white; }
+        .inventaire { background-color: #8a6b4a; color: white; }
+        .ferie { background-color: #6b4a2c; color: white; }
+
+        /* Effets d'interaction */
+        .emploi-temps tr:hover td {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Style des cellules fusionnées */
+        td[colspan] {
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        /* Style spécial pour les jours */
+        .jour {
+            background-color: #4a6b8a !important;
+            color: white;
+            font-weight: bold;
+            border-right: 2px solid #d4af37;
+        }
+
+        /* Adaptation mobile */
+        @media (max-width: 768px) {
+            .emploi-temps {
+                font-size: 0.8em;
+            }
+            .emploi-temps th,
+            .emploi-temps td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Emploi du temps Bibliothèque</h1>
+<table class="emploi-temps">
+    <tr>
+        <th>JOURS/HEURES</th>
+        <th>8H-9H</th>
+        <th>9H-10H</th>
+        <th>10H-11H</th>
+        <th>11H-12H</th>
+        <th>12H-13H</th>
+        <th>13H-14H</th>
+        <th>14H-15H</th>
+        <th>15H-16H</th>
+        <th>16H-17H</th>
+        <th>17H-18H</th>
+    </tr>
+
+    <tr>
+        <th class="jour">LUNDI</th>
+        <td></td>
+        <td colspan="2" class="groupe1">GROUPE1</td>
+        <td></td>
+        <td colspan="2" class="pause">PAUSE</td>
+        <td></td>
+        <td colspan="2" class="groupe4">GROUPE4</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th class="jour">MARDI</th>
+        <td></td>
+        <td colspan="2" class="groupe2">GROUPE2</td>
+        <td></td>
+        <td colspan="2" class="pause">PAUSE</td>
+        <td></td>
+        <td colspan="2" class="groupe5">GROUPE5</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th class="jour">MERCREDI</th>
+        <td></td>
+        <td colspan="2" class="groupe1">GROUPE1</td>
+        <td></td>
+        <td colspan="2" class="pause">PAUSE</td>
+        <td></td>
+        <td colspan="3" class="projection">PROJECTION</td>
+    </tr>
+
+    <tr>
+        <th class="jour">JEUDI</th>
+        <td></td>
+        <td colspan="2" class="groupe2">GROUPE2</td>
+        <td></td>
+        <td colspan="2" class="pause">PAUSE</td>
+        <td></td>
+        <td colspan="2" class="groupe4">GROUPE6</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th class="jour">VENDREDI</th>
+        <td></td>
+        <td colspan="2" class="groupe1">GROUPE1</td>
+        <td></td>
+        <td colspan="2" class="pause">PAUSE</td>
+        <td></td>
+        <td colspan="3" class="enfant">ENFANTS</td>
+    </tr>
+
+    <tr>
+        <th class="jour">SAMEDI</th>
+        <td></td>
+        <td colspan="2" class="groupe2">GROUPE2</td>
+        <td></td>
+        <td colspan="2" class="pause">PAUSE</td>
+        <td></td>
+        <td colspan="3" class="inventaire">INVENTAIRE</td>
+    </tr>
+
+    <tr>
+        <th class="jour">DIMANCHE</th>
+        <td colspan="10" class="ferie">FERMÉ</td>
+    </tr>
+</table>
+
+</body>
+</html>

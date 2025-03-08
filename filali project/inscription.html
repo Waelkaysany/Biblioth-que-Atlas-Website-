@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BIBLIO ATLAS - Formulaire d'Inscription</title>
+    <style>
+        /* Classic Library Theme Styles */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 20px;
+            background-color: #f5f3e7;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            color: #2c4f6b;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #4a6b8a;
+            margin: 20px 0 15px;
+            font-size: 1.2em;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"], 
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            margin: 10px 0;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            background-color: #4a6b8a;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2c4f6b;
+        }
+
+        .vintage-border {
+            border: 1px solid #d4af37;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .age-selector {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #f8f5ec;
+            border-radius: 4px;
+        }
+        .classique-select {
+    padding: 8px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #f8f5ec;
+}
+
+.pays-fixed {
+    border: none;
+    background: transparent;
+    color: #4a6b8a;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1>BIBLIO ATLAS - INSCRIPTION</h1>
+        </div>
+
+        <form>
+            <!-- Personal Information Section -->
+            <fieldset class="vintage-border">
+                <legend class="section-title">Informations Personnelles</legend>
+                
+                <div class="form-group">
+                    <label>Nom PRENOM :</label> 
+                    <input type="text" >
+                </div>
+
+                <div class="form-group">
+                  <div class="form-group">
+                    <label>Ville - Pays :</label>
+                    
+                    <!-- Input pour la ville -->
+                    <select name="ville" id="ville" class="classique-select">
+                        <option value="casablanca">Casablanca (Casa) </option>
+                        <option value="el_jadida">El Jadida </option>
+                        <option value="tanger">Tanger </option>
+                        <option value="rabat">Rabat 🇲🇦</option>
+                        <option value="marrakech">Marrakech </option>
+                        <option value="fes">Fès </option>
+                        <option value="agadir">Agadir </option>
+                        <option value="meknes">Meknès </option>
+                        <option value="oujda">Oujda </option>
+                        <option value="tetouan">Tétouan </option>
+                        <option value="kenitra">Kénitra </option>
+                        <option value="safi">Safi </option>
+                    </select>
+                <br>
+                <br>
+                    <!-- Pays fixé sur Maroc -->
+                    <input type="text" placeholder="Maroc"  class="pays-fixed">
+                    </div>
+
+                <div class="form-group">
+                    <label>Sexe :</label>
+                    <div class="checkbox-group">
+                        <input type="radio" name="gender"> Masculin 
+                        <input type="radio" name="gender"> Feminin 
+                        <input type="radio" name="gender"> Indéterminé
+                    </div>
+                </div>
+
+                <div class="form-group age-selector">
+                    <label style="padding-bottom:4px;">Age :
+                    <input type="text"> 
+                    </label>
+                  
+                </div>
+            </fieldset>
+
+            <!-- Survey Section -->
+            <fieldset class="vintage-border">
+                <legend class="section-title">SONDAGE</legend>
+                
+                <div class="form-group">
+                    <p>QUE PENSEZ VOUS DE L’ENSEMBLE DES THEMES DISPONIBLES À LA BIBLIOTHEQUES ? :</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox"> COMPLET<br>
+                        <input type="checkbox"> A AMELIORER<br>
+                        <input type="checkbox"> INCOMPLET
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Le site est :</label>
+                    <select style="padding:5px;" >
+                        <option>Sympa</option>
+                        <option>Moyen</option>
+                        <option>A revoir</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Suggestions Section -->
+            <div class="form-group">
+                <label>De suggestions ?</label>
+                <textarea rows="4" placeholder="Tapez ici toute remarque que vous jugerez utile"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button type="submit">Envoyer</button>
+                <button type="reset">Effacer</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

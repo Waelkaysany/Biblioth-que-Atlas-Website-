@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque Scientifique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f6fa;
+            padding: 2rem;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            margin: 0;
+             height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            font-size: 2.5em;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.541);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-title {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            font-size: 1.2em;
+        }
+
+        .subcategory-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .subcategory-item {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-left: 3px solid;
+            transition: all 0.3s ease;
+        }
+
+        .subcategory-item:hover {
+            background: #f8f9fa;
+            padding-left: 1rem;
+        }
+
+        /* Category Colors */
+        .math { background: #ff6600; }
+        .info { background: #ff0000; }
+        .chimie { background: #e74c3c; }
+        .physique { background: #b35900; }
+        .science { background: #723108; }
+
+        .math-item { border-color: #ff6600; }
+        .info-item { border-color: #ff0000; }
+        .chimie-item { border-color: #e74c3c; }
+        .physique-item { border-color:  #b35900; }
+        .science-item { border-color:#723108; }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Catégories de Livres Scientifiques</h1>
+        
+        <div class="category-grid">
+            <!-- Mathématiques -->
+            <section class="category-card">
+                <div class="category-title math">Mathématiques</div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item math-item">Algèbre</li>
+                    <li class="subcategory-item math-item">Analyse</li>
+                    <li class="subcategory-item math-item">Géométrie</li>
+                </ul>
+            </section>
+
+            <!-- Informatique -->
+            <section class="category-card">
+                <div class="category-title info">Informatique</div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item info-item">Algo et Programmation</li>
+                    <li class="subcategory-item info-item">Réseaux</li>
+                    <li class="subcategory-item info-item">Base de données</li>
+                </ul>
+            </section>
+
+            <!-- Chimie -->
+            <section class="category-card">
+                <div class="category-title chimie">Chimie</div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item chimie-item">Chimie Minérale</li>
+                    <li class="subcategory-item chimie-item">Chimie Analytique</li>
+                </ul>
+            </section>
+      <!-- Physique -->
+            <section class="category-card"  style="margin-left:80px;width:500px;">
+                <div class="category-title physique">Physique</div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item physique-item">Electronique</li>
+                    <li class="subcategory-item physique-item">Electricité</li>
+                    <li class="subcategory-item physique-item">Magnétisme</li>
+                </ul>
+            </section>
+
+            <!-- Sciences -->
+            <section class="category-card" style="margin-left: 250px ;width:500px;">
+                <div class="category-title science">Sciences</div>
+                <ul class="subcategory-list">
+                    <li class="subcategory-item science-item">Science de la Terre</li>
+                    <li class="subcategory-item science-item">Science de l'Espace</li>
+                </ul>
+            </section>
+      
+         
+        </div>
+    </div>
+</body>
+</html>
